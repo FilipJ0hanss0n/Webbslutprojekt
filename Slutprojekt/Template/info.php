@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<th>Info</th>
+	</tr>
+	<br>
+	<tr>
+		<th>Användarnman:</th>
+	</tr>
+	<br>
+	<tr>
+		<th>Lösenord:</th>
+	</tr>
+</table>
