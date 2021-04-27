@@ -13,9 +13,9 @@
 		
 		<form action="post.php" method="post">
 			<p><label for="title">Titel</label>
-			<input> type="text" id="title" name="title"></p>
+			<input type="text" id="title" name="title"></p>
 			<p><label for="text">BrödText:</label>
-			<textarea type="text" rows="5" cols="50" id="text" name="text"></p>
+			<textarea rows="5" cols="50" id="text" name="text"></textarea>/p>
 			<p><input type="submit" value="Lägg upp"></p>
 		</form>
 	
