@@ -1,5 +1,5 @@
 <?php
-$dbh = new mysqli("localhost" "DbUser", "hej123", "databas");
+$dbh = new mysqli("localhost", "DbUser", "hej123", "databas");
 
 if(!$dbh)
 {

@@ -1,12 +1,17 @@
 <?php
 	$str="";
 	
-	if(isset($_GET['name'])){
+
+	require "../Include/connect.php";
+
+	if(isset($_GET['name']))
+	{
 		$usr = $_GET['name'];
 		$str = "Användarnamnet $usr är upptaget";
 	}
 	
-	if(isset($_GET['mail'])){
+	if(isset($_GET['mail']))
+	{
 		$ma = $_GET['mail'];
 		$str = "Mailadressen $ma är upptagen";
 	}
@@ -17,16 +22,13 @@
 	$Username = filter_input(INPUT_POST, 'Username', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
 	$Email = filter_input(INPUT_POST, 'Email', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
 	$Password = filter_input(INPUT_POST, 'Password', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
-
-	require "../Include/connect.php";
-	
 	
 	$sql = "SELECT * FROM users WHERE Username = ? OR Email = ?";
 	$res = $dbh -> prepare($sql);
 	$res -> bind_param("ss",$Username, $Email);
 	$res -> execute();
 	$result = $res->get_result();
-	$row=$result->fetch_assoc();
+	$row = $result->fetch_assoc();
 	
 		if($row !==NULL)
 		{
@@ -41,13 +43,14 @@
 			}
 		}
 	
+		
 		else
 		{
 			$status = 1;
 		
-			$sql = "INSERT INTO User(Username,Email, Password, Status) VALUE (?,?,?,?)";
+			$sql = "INSERT INTO users(Username, Email, Password, Status) VALUE (?,?,?,?)";
 			$res = $dbh -> prepare ($sql);
-			$res -> bind_param("sssi", $Username, $Email, $Password, $Status);
+			$res -> bind_param("sssi", $Username, $Email, $Password, $status);
 			$res -> execute();
 		
 			$str = "Användare Tillagd";
@@ -58,8 +61,8 @@
 	{
 		echo $str;
 		$str.=<<<FORM
-			<form action="{$_SERVER['PHP_SELF']}" metohd="post">
-				<p><label for="user">Användarnamn:</label>
+			<form action="{$_SERVER['PHP_SELF']}" method="post">
+				<p><label for="Username">Användarnamn:</label>
 				<input type="text" id="Username" name="Username"></p>
 				<p><label for="Email">Email:</label>
 				<input type="email" id="Email" name="Email"></p>

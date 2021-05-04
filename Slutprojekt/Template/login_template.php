@@ -1,3 +1,31 @@
+<?php
+	
+	
+	$str = "";
+	
+	if($_SESSION['status'] == 1)
+	{
+		
+	}
+	
+	else
+	{
+		echo $str;
+		$str.=<<<FORM
+			<form action="{$_SERVER['PHP_SELF']}" method="post">
+				<p><label for="Username">Användarnamn:</label>
+				<input type="text" id="Username" name="Username"></p>
+				<p><label for="Email">Email:</label>
+				<input type="email" id="Email" name="Email"></p>
+				<p><label for="Password">Lösenord:</label>
+				<input type="password" id="Password" name="Password"></p>
+				<p><input type="submit" value="Skapa användare"></p>
+			</form>
+FORM;
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 	<head>
