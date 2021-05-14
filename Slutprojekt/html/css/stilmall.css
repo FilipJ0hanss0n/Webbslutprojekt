@@ -3,15 +3,15 @@ body
 	background:#6699ff
 }
 
-nav a:first-child
-{
-	margin-right: 90vw;
-}
-
 nav a
 {
-	text-decoration:none;
-	color:black;
+	color: black;
+	text-decoration: none;
+}
+
+nav a:first-child
+{
+	margin-right: 85vw;
 }
 
 article
@@ -22,26 +22,32 @@ article
 footer
 {
 	background-color:#cccccc;
-	margin-top:50px;
-	text-align:center;
-	margin:10vw;
+	margin: 20px;
+	margin-top: 10vw;
+	padding: 10px;
+	text-align: center;
 }
 
 form
 {
-	text-align:center;
-	margin:50px;
+	text-align: center;
 }
 
-form a
+div
 {
-	border-color:black;
-	border-style:solid;
+	text-align: center;
+}
+
+a
+{
+	background-color: lavenderblush;
+	border-style: solid;
+	border-color: gray;
 	border-width:thin;
-	margin:30px;
-	background-color:white;
-	text-decoration:none;
-	padding:1px 2px;
-	color:black;
-	display:inline-block;
+	color: black;
+	padding: 1px 2px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }

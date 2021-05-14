@@ -1,3 +1,3 @@
 <footer>
-	<p> kontakt: support@kattkungen.com Hej </p>
+	<p>Kontakt: Filip@support.com</p>
 </footer>

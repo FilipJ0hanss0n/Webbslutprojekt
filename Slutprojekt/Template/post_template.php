@@ -2,7 +2,7 @@
 <html lang="sv">
 	<head>
 		<meta charset="utf-8">
-		<title> Djur </title>
+		<title>Posta inlägg</title>
 		<link rel="stylesheet" href="css/stilmall.css">
 		<link rel="shortcut icon" type ="image/png" href="Bild/favicon-32x32.png"/>
 	</head>
@@ -11,15 +11,16 @@
 			require "menu.php";
 		?>
 		
-		<form action="post.php" method="post">
-			<p><label for="title">Titel</label>
-			<input type="text" id="title" name="title"></p>
-			<p><label for="text">BrödText:</label>
-			<textarea rows="5" cols="50" id="text" name="text"></textarea></p>
+		<!--Formulär-->
+		<form action="post2.php" method="post">
+			<p><label for="Title">Titel</label>
+			<input type="text" id="Title" name="Title"></p>
+			<p><label for="Text">Brödtext:</label>
+			<textarea rows="5" cols="50" id="Text" name="Text"></textarea></p>
 			<p><input type="submit" value="Lägg upp"></p>
 		</form>
-	
-		<?php 
+		
+		<?php
 			require "footer.php";
 		?>
 	</body>

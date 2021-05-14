@@ -1,6 +1,5 @@
 <?php
 	session_start();
 	
-	require "../Template/index-template.php";
-	
+	require "../Template/index_template.php";
 ?>

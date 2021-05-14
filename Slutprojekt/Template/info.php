@@ -4,10 +4,10 @@
 	</tr>
 	<br>
 	<tr>
-		<th>Användarnman:</th>
+		<th>Användarnamn:</th>
 	</tr>
 	<br>
 	<tr>
-		<th>Lösenord:</th>
+		<th>Email:</th>
 	</tr>
 </table>
