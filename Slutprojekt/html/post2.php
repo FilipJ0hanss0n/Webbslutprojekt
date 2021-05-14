@@ -5,7 +5,7 @@
 
 	if($_POST["Title"] != null && $_POST["Text"] != null)
 	{
-		// Laddar upp inlägg
+		// Lägger till inlägg
 		$sql = "INSERT INTO posts(User, Titel, Text) VALUE (?,?,?)";
 		$res = $dbh -> prepare($sql);
 		$res -> bind_param("sss", $_SESSION['Username'], $_POST['Title'], $_POST['Text']);
